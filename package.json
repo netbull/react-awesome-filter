@@ -1,0 +1,116 @@
+{
+    "name": "react-awesome-filter",
+    "description": "React Date, DateRange & Time pickers for Semantic UI.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/netbull/react-awesome-filter.git"
+    },
+    "author": {
+        "name": "Alexander Dimitrov",
+        "email": "netbull2007@gmail.com"
+    },
+    "keywords": [
+        "react",
+        "semantic",
+        "semantic-ui",
+        "awesome",
+        "filter"
+    ],
+    "license": "MIT",
+    "version": "0.0.1",
+    "main": "dist/react-awesome-filter.cjs.js",
+    "module": "dist/react-awesome-filter.esm.js",
+    "source": "src/index.js",
+    "dependencies": {
+        "moment": "^2.29.1",
+        "react-dates": "^21.8.0"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "build-watch": "rollup -c -w",
+        "start-playground": "cd playground && npm run start",
+        "i-all": "npm i && cd playground && npm i",
+        "dev": "npm-run-all --parallel build-watch start-playground"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.3",
+        "@babel/core": "^7.14.3",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/preset-env": "^7.14.2",
+        "@babel/preset-react": "^7.13.13",
+        "@rollup/plugin-babel": "^5.3.0",
+        "@rollup/plugin-commonjs": "^19.0.0",
+        "@rollup/plugin-node-resolve": "^7.1.3",
+        "@semantic-release/changelog": "^6.0.0",
+        "@semantic-release/commit-analyzer": "^9.0.1",
+        "@semantic-release/git": "^10.0.0",
+        "@semantic-release/github": "^8.0.1",
+        "@semantic-release/npm": "^8.0.0",
+        "@semantic-release/release-notes-generator": "^10.0.2",
+        "@testing-library/jest-dom": "^5.12.0",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3",
+        "babel-loader": "^8.2.2",
+        "node-sass": "^6.0.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-url": "^10.1.3",
+        "react-scripts": "4.0.3",
+        "rollup": "^2.50.3",
+        "rollup-plugin-delete": "^2.0.0",
+        "rollup-plugin-postcss": "^4.0.0",
+        "semantic-release": "^18.0.0",
+        "semantic-ui-react-date-picker": "1.1.6"
+    },
+    "peerDependencies": {
+        "classnames": "^2.3.1",
+        "prop-types": "^15.7.2",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
+        "semantic-ui-react": "^2.0.3"
+    },
+    "files": [
+        "dist",
+        "package.json",
+        "README.md"
+    ],
+    "release": {
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            [
+                "@semantic-release/changelog",
+                {
+                    "changelogFile": "docs/CHANGELOG.md"
+                }
+            ],
+            "@semantic-release/npm",
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "docs/CHANGELOG.md",
+                        "package.json"
+                    ]
+                }
+            ]
+        ]
+    }
+}

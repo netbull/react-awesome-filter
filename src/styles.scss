@@ -1,0 +1,46 @@
+.mobileList {
+	.mobileFields {
+		.mobileField {
+			&.mr-10 {
+				margin-right: 10px;
+			}
+
+			@media (max-width: 1270px) and (min-width: 768px) {
+				min-width: 7em;
+			}
+			@media (max-width: 768px) {
+				width: 100%;
+				margin-bottom: 5px;
+				margin-right: 0;
+
+				&.mr-10 {
+					margin-right: 0;
+				}
+
+				> div {
+					width: 100%;
+				}
+			}
+		}
+
+		.buttonM5 {
+			margin-left: 5px;
+		}
+
+		.buttonM10 {
+			margin-left: 10px;
+
+			@media (max-width: 768px) {
+				margin-left: auto;
+			}
+		}
+
+		.buttonM5 ~.label.labelMobile {
+			@media (max-width: 768px) {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
